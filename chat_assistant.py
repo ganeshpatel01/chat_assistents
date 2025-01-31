@@ -90,16 +90,6 @@ def process_query(query):
 st.title("💬 Employee Chat Assistant")
 st.write("Ask me about employees, departments, managers, and salaries!")
 
-# Add an explanation for user guidance
-st.markdown("""
-    **Examples of queries you can ask:**
-    - Show me all employees in the marketing department
-    - Who is the manager of the finance department?
-    - List all employees hired after 2020-01-01
-    - Show the highest-paid employee
-    - What is the total salary expense for the HR department?
-""")
-
 # User input
 query = st.text_input("Enter your query:")
 
@@ -108,4 +98,3 @@ if query:
     with st.spinner('Processing your query...'):
         response = process_query(query)
         st.success(response)
-
